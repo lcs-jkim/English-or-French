@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     
     @IBAction func Analyze(_ sender: Any) {
         
-        guard let TextFieldInput = TextField.text, TextFieldInput.count > 0 else {
+        guard let TextFieldInput = TextField.text, TextFieldInput.count > 0, TextFieldInput.count < 225 else {
             ErrorMessage.text = ("Please enter your text")
             return
         }
