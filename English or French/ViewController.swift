@@ -25,12 +25,35 @@ class ViewController: UIViewController {
         
         // Clear the error and answer box
         
+        AnswerBox.text = ""
+        ErrorMessage.text = ""
+        
         guard let TextFieldInput = TextField.text, TextFieldInput.count > 0, TextFieldInput.count < 225 else {
-            ErrorMessage.text = ("Please enter your text")
+            ErrorMessage.text = ("Please enter a text text to analyze")
             return
         }
         
+        var TCounter = 0
         
+        var SCounter = 0
+        
+        for scalar in TextFieldInput.unicodeScalars {
+            let scalar = scalar.value
+            
+            switch scalar {
+            case 84:
+                TCounter += 1
+            case 116:
+                TCounter += 1
+            case 83:
+                SCounter += 1
+            case 115:
+                SCounter += 1
+            default:
+                break
+            }
+            
+        }
         
     }
     
