@@ -53,6 +53,14 @@ class ViewController: UIViewController {
                 break
             }
             
+            if TCounter > SCounter {
+                AnswerBox.text = ("This looks like English")
+            } else if SCounter > TCounter {
+                AnswerBox.text = ("This looks like French")
+            } else {
+                AnswerBox.text = ("This looks like French")
+            }
+            
         }
         
     }
